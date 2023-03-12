@@ -19,8 +19,8 @@ function Portfolio(){
                         else{
                             return (
                                 // onClick={()=>{Navigation(`/project/${index}`)}}
-                                <a href={item.link} target="_blank" style={{textDecoration:"none",color:"Black"}}>
-                                    <div className="projectItem" key={index} >
+                                <a href={item.link} key={index} target="_blank" style={{textDecoration:"none",color:"Black"}}>
+                                    <div className="projectItem"  >
                                         <div className="textContent">
                                             <h2>{item.title}</h2>
                                             <div className="tags">
