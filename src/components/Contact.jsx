@@ -5,13 +5,31 @@ import facebook from '../assets/facebook.svg'
 import linkedin from '../assets/linkedin.svg'
 import github from '../assets/github.svg'
 import sendIcon from '../assets/sendIcon.svg'
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 
 function Contact(){
     const handleCopy =()=>{
         navigator.clipboard.writeText("pratap.rohit002@gmail.com");
     }
+    const form = useRef();
+    const sendSuccesful=()=>{
+        document.getElementById("sent").innerHTML="Sent SucessFully 👍"
+    }
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        console.log(form.current)
+        emailjs.sendForm('service_tfrve07', 'template_tuxl7l5', form.current, '3HkPCOP9YhLREp4rN')
+        .then((result) => {
+            console.log(result.text);
+            sendSuccesful()
+        }, (error) => {
+            console.log(error.text);
+            alert("There is a problem while submiting, Please Try again after some Time.")
+        });
+    };
 
     return(
         <>
@@ -39,11 +57,11 @@ function Contact(){
                     <div className="formDiv">
                         <h3>Contact</h3>
                         <p className="comment">{"//"} Submit the form to Start a chat.</p>
-                        <form>
-                            <input type="text" name="name" id="NameInput" className="input" placeholder='Enter Your Name' />
-                            <input type="email" name="email" id="NameInput" className="input" placeholder='Enter Your Email' />
-                            <textarea name="message" id="TextInput" className="input textInput" placeholder='Your Message Here' ></textarea>
-                            <button className='btn btnPrimary' id='formSubmit'><span>Send <img src={sendIcon} alt=" " /></span></button>
+                        <form ref={form} onSubmit={sendEmail}>
+                            <input type="text" name="user_name" id="NameInput" className="input" required placeholder='Enter Your Name' />
+                            <input type="email" name="user_email" id="NameInput" className="input" required placeholder='Enter Your Email' />
+                            <textarea name="message" id="TextInput" className="input textInput" required placeholder='Your Message Here' ></textarea>
+                            <button type="submit" className='btn btnPrimary' id='formSubmit'><span id='sent'>Send <img src={sendIcon} alt=" " /></span></button>
                         </form>
                     </div>
                 </div>
