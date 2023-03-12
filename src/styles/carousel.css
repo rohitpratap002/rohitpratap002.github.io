@@ -1,0 +1,95 @@
+.carouselContainer{
+    height: 70vh;
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.carouselContainer .btn{
+    position: absolute;
+    z-index: 1;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    height: 100%;
+    width: 2rem;
+    top: 0;
+    color: white;
+    text-shadow: 1px 2px 3px #000,-1px 0px 3px #000;
+    background: transparent;
+}
+.carouselContainer .btn:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+.carouselContainer .leftBtn{
+    left: 0;
+}
+.carouselContainer .rightBtn{
+    right: 0;
+}
+.carouselDot{
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    z-index: 1;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+.carouselDot .dot{
+    height: .8rem;
+    width: .8rem;
+    border-radius: 50%;
+    background: var(--clr-purple);
+    border: .1px solid var(--clr-white);
+    transition: .5s all ease;
+}
+.carouselDot .dotActive{
+    width: 2.4rem;
+    border-radius: 2.4rem;
+}
+.carouselImages{
+    width: 100vw;
+    height: 100%;
+    position: relative;
+}
+.carouselImages .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70vh;
+    opacity: 0;
+    transition: .5s all ease;
+}
+.carouselImages .imgActive{
+    opacity: 1;
+}
+
+@media (max-width:1024px) and (min-width:861px) {
+    :root{
+      --padding-side:10rem;
+    }
+  }
+  @media (max-width:860px) and (min-width:769px){
+    :root{
+      --padding-side:5rem;
+    }
+  }
+  @media (max-width:768px){
+    .carouselContainer{
+        height: 40vh;
+    }
+    .carouselImages .img{
+        height: 40vh;
+    }
+  }

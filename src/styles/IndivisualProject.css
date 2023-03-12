@@ -1,0 +1,50 @@
+.indivisualContainer{
+    margin-top: var(--nav-height);
+}
+.indiHeader{
+    background:linear-gradient(0deg,#890affcc,#8909ffcc ), url(https://picsum.photos/id/1043/800/600) center center / cover no-repeat;
+    min-height: 60vh;
+    min-width: 100%;
+    padding: 3rem var(--padding-side);
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.indiHeader h1{
+    font-size: 2.8rem;
+}
+.indiHeader .tags{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+.indiHeader .tag{
+    padding: .2rem .8rem;
+    font-size: 1.3rem;
+    background: var(--clr-white);
+    color: var(--clr-purple);
+    border-radius: .4rem;
+}
+.indiLink{
+    padding: 1rem var(--padding-side);
+    font-size: 1.8rem;
+}
+.indiLink span{
+    color: red;
+}
+.indivisualDesc{
+    padding: 1rem var(--padding-side);
+    font-size: 1.5rem;
+}
+.indiFullImg{
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    padding: 0 var(--padding-side);
+}
+.indiFullImg img{
+    width: 100%;
+    height: 100%;
+}

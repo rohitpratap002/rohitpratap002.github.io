@@ -1,0 +1,171 @@
+.navbar{
+    width: 100vw;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding:0 var(--padding-side);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: .5s background ease;
+    background: var(--clr-purple);
+}
+.navScroll{
+    background: var(--clr-background);
+    box-shadow: -2px 0px 8px var(--clr-purple);
+}
+.navbar .logo{
+    font-size: 4rem;
+    color: var(--clr-white);
+    font-family: 'DynaPuff', cursive;
+    font-weight: 600;
+    width: 50%;
+}
+.navScroll .logo{
+    color: var(--clr-purple);
+}
+.navLinks{
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+.navLink{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--clr-white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: .5rem .2rem;
+    margin: 0 1.3rem;
+    margin-left: 5px;
+    border-radius:.8rem;
+    position: relative;
+    transition: .5s color ease;
+}
+.navScroll .navLink{
+    color: var(--clr-black);
+}
+.navLink::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--clr-white);
+    width: 100%;
+    transform: scaleX(0);
+    transition: .5s transform ease;
+    transform-origin: center;
+}
+.navScroll .navLink::after{
+    
+    background-color: var(--clr-purple);
+}
+.navLink:hover{
+    color: var(--clr-white);
+}
+.navScroll .navLink:hover{
+    color: var(--clr-purple);
+}
+.navLink:hover:after{
+    transform: scaleX(1);
+}
+.navLinkActive{
+    color: var(--clr-purple);
+    position: relative;
+}
+.navLinkActive::after{
+    transform: scaleX(1);
+}
+
+
+
+
+
+@media (max-width:768px){
+    .navbar{
+        justify-content: space-between;
+    }
+    .navLinks{
+        position: absolute;
+        overflow-y: scroll;
+        left: 100%;
+        top: 6rem;
+        width: 100%;
+        background-color: var(--clr-background);
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        padding: 5rem 0;
+        transition: .5s all ease;
+    }
+    .navLinksOpen{
+        left: 0;
+    }
+    .navLink{
+        display: block;
+        width: 90%;
+        color: var(--clr-black);
+        text-align: center;
+    }
+    .navLink:hover{
+        color: var(--clr-purple);
+    }
+    .navLink::after{
+        background: var(--clr-purple);
+    }
+    .hamMenu{
+        height: 2.5rem;
+        display: grid;
+        place-items: center;
+        z-index: 5;
+    }
+    .hamburger{
+        position: relative;
+        width: 3.5rem;
+        height: .5rem;
+        background-color: var(--clr-white);
+        transition: .5s all ease;
+    }
+    .navScroll .hamburger, .navScroll .hamburger::before,.navScroll .hamburger::after{
+        background-color: var(--clr-purple);
+    }
+    .hamburger::before,.hamburger::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--clr-white);
+        transform-origin:center ;
+        transition: .5s all ease;
+    }
+    .hamburger::before{
+        top: -10px;
+    }
+    .hamburger::after{
+        bottom: -10px;
+    }
+    .hamMenu:hover .hamburger:not(.hamClose):after{
+        left: 5px;
+    }
+    .hamMenu:hover .hamburger:not(.hamClose)::before{
+        left: -5px;
+    }
+    .hamClose{
+        transform: rotate(-45deg);
+    }
+    .hamClose::after{
+        bottom: 0;
+        left: 0;
+        transform: rotate(90deg);
+    }
+    .hamClose::before{
+        display: none;
+    }
+}

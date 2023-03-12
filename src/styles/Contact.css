@@ -1,0 +1,187 @@
+.ContactSec{
+    padding-top: var(--nav-height);
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--clr-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ContactDiv{
+    background: var(--clr-purple);
+    width: 100%;
+    padding: var(--nav-height) var(--padding-side);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.textContent{
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1.5fr repeat(2,1fr);
+    padding-right: 1rem;
+}
+.textContent p{
+    color: var(--clr-white);
+    font-size: 1.8rem;
+}
+.textContent .emailDiv{
+    color: var(--clr-white);
+    font-size: 1.8rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .6rem;
+    height: fit-content;
+    max-width: fit-content;
+    border-radius: .8rem;
+    padding: .5rem;
+}
+.emailDiv div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .4rem;
+}
+.emailDiv .mail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .4rem;
+}
+.emailDiv span{
+    padding: 0 1rem;
+    opacity: 0;
+    border-left: 1px dashed transparent;
+    transition: .5s all ease;
+}
+.emailDiv:hover::before{
+    content: "Copy to Clipboard";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: rgb(49, 49, 49);
+    width: 90%;
+    padding: .2rem;
+    transition: .5s all ease;
+}
+.emailDiv:hover{
+    background: #3601685e;
+    cursor: pointer;
+}
+.emailDiv:hover span{
+    opacity: 1;
+    border-left-color:rgba(255, 255, 255, 0.616) ;
+}
+.emailDiv:active{
+    background: #350066;
+    user-select: none;
+    cursor: pointer;
+}
+.emailDiv:active::before{
+    content: "Copied";
+}
+.iconDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1rem;
+}
+.iconDiv img{
+    width: 35px;
+}
+.formDiv{
+    position: absolute;
+    background: var(--clr-white);
+    width: calc(50% - var(--padding-side));
+    left: 50%;
+    top: -8rem;
+    bottom: -8rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 2rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.196);
+}
+.formDiv h3{
+    font-size: 3rem;
+    width: fit-content;
+    font-family: 'Poppins',sans-serif;
+    position: relative;
+}
+.formDiv h3::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    top: unset;
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 0.2rem;
+    background-color: var(--clr-purple);
+}
+.comment{
+    /* margin-top: .5rem; */
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--clr-purple);
+    font-family: 'Poppins',sans-serif;
+}
+.formDiv form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.formDiv .input{
+    outline: none;
+    border: none;
+    background-color: var(--clr-background);
+    border-bottom:.4rem solid var(--clr-purple);
+    border-radius: .5rem;
+    color: var(--clr-purple);
+    font-size: 1.8rem;
+    padding:.5rem .5rem ;
+}
+.formDiv .textInput{
+    height: 15rem;
+    resize: none;
+}
+#formSubmit span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+#formSubmit:hover img{
+    filter: invert(.3) sepia(1) saturate(97) hue-rotate(277deg);
+}
+
+@media (max-width:768px){
+    .ContactDiv{
+        flex-direction: column-reverse;
+        height: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 2rem;
+    }
+    .textContent{
+        width: 100%;
+        padding-inline: 2.5rem;
+        height: fit-content;
+    }
+    .formDiv{
+        position: relative;
+        top: unset;
+        bottom: unset;
+        left: unset;
+        right: unset;
+        width: 100%;
+    }
+}
