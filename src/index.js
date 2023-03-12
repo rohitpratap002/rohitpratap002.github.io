@@ -7,8 +7,8 @@ import HomeWebsite from './HomeWebsite';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <HashRouter>
       <HomeWebsite />
-    </Router>
+    </HashRouter>
   </React.StrictMode>
 );
