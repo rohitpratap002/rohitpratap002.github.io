@@ -1,7 +1,7 @@
 {
   "name": "rohit-portfolio",
   "version": "0.1.0",
-  "homepage": "https://rohitpratap002.github.io/#",
+  "homepage": "https://rohitpratap002.github.io/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
