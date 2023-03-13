@@ -12,7 +12,7 @@ function Hero() {
         <h1>ROHIT PRATAP</h1>
         <p>WEB DEVELOPER/DESIGNER</p>
         <div className="btnDiv">
-          <a href="#ContactSec" className='btn btnPrimary'><span>HIRE ME</span></a>
+          <a href="/#/#ContactSec" className='btn btnPrimary'><span>HIRE ME</span></a>
           <a href={CV} download className='btn btnSecondary'><span>GET CV</span></a>
         </div>
       </div>

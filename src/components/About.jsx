@@ -16,7 +16,7 @@ function About(){
         <p>Hello there! My name is Rohit Pratap. I am a front-end web developer & designer, and I'm very passionate and dedicated to my work.
             <br/>I have acquired the skills and knowledge necessary to make your project a success.</p>
         <div className="btnDiv">
-          <a href="/#ContactSec" className='btn btnPrimary'><span>HIRE ME</span></a>
+          <a href="/#/#ContactSec" className='btn btnPrimary'><span>HIRE ME</span></a>
         </div>
       </div>
     </div>

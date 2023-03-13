@@ -23,11 +23,11 @@ function Navbar(){
                 <div className={navOpen?"hamburger hamClose":"hamburger"}></div>
             </div>
             <div className={`navLinks ${navOpen?"navLinksOpen":""}`}>
-                <a href="/#HomeSec" onClick={()=>setNavOpen(false)} className="navLink">Home</a>
-                <a href="/#AboutSec" onClick={()=>setNavOpen(false)} className="navLink">About</a>
-                <a href="/#SkillSec" onClick={()=>setNavOpen(false)} className="navLink">Experience</a>
-                <a href="/#PortfolioSec" onClick={()=>setNavOpen(false)} className="navLink">Portfolio</a>
-                <a href="/#ContactSec" onClick={()=>setNavOpen(false)} className="navLink">Contact</a>
+                <a href="/#/#HomeSec" onClick={()=>setNavOpen(false)} className="navLink">Home</a>
+                <a href="/#/#AboutSec" onClick={()=>setNavOpen(false)} className="navLink">About</a>
+                <a href="/#//#SkillSec" onClick={()=>setNavOpen(false)} className="navLink">Experience</a>
+                <a href="/#//#PortfolioSec" onClick={()=>setNavOpen(false)} className="navLink">Portfolio</a>
+                <a href="/#//#ContactSec" onClick={()=>setNavOpen(false)} className="navLink">Contact</a>
             </div>
         </div>
     )
