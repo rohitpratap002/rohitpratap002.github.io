@@ -1,4 +1,5 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 // import {Link} from 'react-router-dom'
 import '../styles/Navbar.css'
@@ -23,11 +24,11 @@ function Navbar(){
                 <div className={navOpen?"hamburger hamClose":"hamburger"}></div>
             </div>
             <div className={`navLinks ${navOpen?"navLinksOpen":""}`}>
-                <a href="#HomeSec" onClick={()=>setNavOpen(false)} className="navLink">Home</a>
-                <a href="#AboutSec" onClick={()=>setNavOpen(false)} className="navLink">About</a>
-                <a href="#SkillSec" onClick={()=>setNavOpen(false)} className="navLink">Experience</a>
-                <a href="#PortfolioSec" onClick={()=>setNavOpen(false)} className="navLink">Portfolio</a>
-                <a href="#ContactSec" onClick={()=>setNavOpen(false)} className="navLink">Contact</a>
+                <Link to="/#HomeSec" onClick={()=>setNavOpen(false)} className="navLink">Home</Link>
+                <Link to="/#AboutSec" onClick={()=>setNavOpen(false)} className="navLink">About</Link>
+                <Link to="/#SkillSec" onClick={()=>setNavOpen(false)} className="navLink">Experience</Link>
+                <Link to="/#PortfolioSec" onClick={()=>setNavOpen(false)} className="navLink">Portfolio</Link>
+                <Link to="/#ContactSec" onClick={()=>setNavOpen(false)} className="navLink">Contact</Link>
             </div>
         </div>
     )

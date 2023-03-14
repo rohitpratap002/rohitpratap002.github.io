@@ -1,4 +1,5 @@
 import React from 'react'
+import { HashLink as Link } from 'react-router-hash-link';
 import aboutimg from '../assets/aboutimg.jpg'
 
 function About(){
@@ -16,7 +17,7 @@ function About(){
         <p>Hello there! My name is Rohit Pratap. I am a front-end web developer & designer, and I'm very passionate and dedicated to my work.
             <br/>I have acquired the skills and knowledge necessary to make your project a success.</p>
         <div className="btnDiv">
-          <a href="#ContactSec" className='btn btnPrimary'><span>HIRE ME</span></a>
+          <Link to="/#ContactSec" className='btn btnPrimary'><span>HIRE ME</span></Link>
         </div>
       </div>
     </div>
