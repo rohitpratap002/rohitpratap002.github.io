@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "095c3475b1595e6915d9",
+    "revision": "207aaff45a03ad3c47b6",
     "url": "/static/css/main.751b4a71.chunk.css"
   },
   {
-    "revision": "095c3475b1595e6915d9",
-    "url": "/static/js/main.095c3475.chunk.js"
+    "revision": "207aaff45a03ad3c47b6",
+    "url": "/static/js/main.207aaff4.chunk.js"
   },
   {
     "revision": "7f883c64dc40938d5e56",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/static/media/homeImg.5415239d.svg"
   },
   {
-    "revision": "322f10feb63d177c13d1157203b173b7",
-    "url": "/static/media/ROHIT-PRATAP-Resume.322f10fe.pdf"
+    "revision": "709cc0a9b36e56e1987c4410e088f98c",
+    "url": "/static/media/ROHIT PRATAP-Resume.709cc0a9.pdf"
   },
   {
     "revision": "213c57b4b65ba454a8149c568bb9d90f",
@@ -124,7 +124,7 @@ self.__precacheManifest = [
     "url": "/static/media/homeBack.15f80155.png"
   },
   {
-    "revision": "63cd3f782066e9a568c5982cd5c984da",
+    "revision": "c8f45c6f76844894383298eeb1fb15e3",
     "url": "/index.html"
   }
 ];
